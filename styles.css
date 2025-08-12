@@ -32,8 +32,8 @@
   --text-primary: #1a1a1a;
   --text-secondary: #4a4a4a;
   --text-muted: #6a6a6a;
-  --accent-primary: #1a1a1a;
-  --accent-secondary: #4a4a4a;
+  --accent-primary: #000000;
+  --accent-secondary: #333333;
   --accent-warning: #f59e0b;
   --accent-danger: #ef4444;
   --border-light: #e5e5e5;
@@ -42,9 +42,9 @@
   --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.2);
-  --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
-  --gradient-secondary: linear-gradient(135deg, #4a4a4a 0%, #1a1a1a 100%);
-  --gradient-accent: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%);
+  --gradient-secondary: linear-gradient(135deg, #333333 0%, #000000 100%);
+  --gradient-accent: linear-gradient(135deg, #000000 0%, #333333 100%);
 }
 
 * {
@@ -84,7 +84,7 @@ body::before {
     radial-gradient(circle at 25% 25%, rgba(245, 158, 11, 0.25) 0%, transparent 30%),
     radial-gradient(circle at 85% 15%, rgba(239, 68, 68, 0.25) 0%, transparent 30%),
     radial-gradient(circle at 15% 85%, rgba(147, 51, 234, 0.25) 0%, transparent 30%);
-  animation: backgroundShift 8s ease-in-out infinite;
+  animation: backgroundShift 18s ease-in-out infinite;
   z-index: -1;
 }
 
@@ -477,12 +477,12 @@ body::after {
 
 /* Ensure proper contrast for badges in both themes */
 [data-theme="light"] .badge {
-  background: var(--accent-primary);
+  background: #000000;
   color: #ffffff;
 }
 
 [data-theme="dark"] .badge {
-  background: var(--accent-primary);
+  background: #ffffff;
   color: #000000;
 }
 
@@ -1016,12 +1016,12 @@ html {
 
 /* Ensure proper contrast for badges in both themes */
 [data-theme="light"] .teaching-semester {
-  background: var(--accent-primary);
+  background: #000000;
   color: #ffffff;
 }
 
 [data-theme="dark"] .teaching-semester {
-  background: var(--accent-primary);
+  background: #ffffff;
   color: #000000;
 }
 
