@@ -1,25 +1,50 @@
 /* Modern Academic Homepage Styles */
 :root {
-  --bg-primary: #0a0f1c;
-  --bg-secondary: #111827;
-  --bg-card: #1f2937;
-  --bg-elevated: #374151;
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
-  --accent-primary: #3b82f6;
-  --accent-secondary: #10b981;
-  --accent-warning: #f59e0b;
-  --accent-danger: #ef4444;
-  --border-light: #374151;
-  --border-medium: #4b5563;
+  /* Dark Theme (Default) */
+  --bg-primary: #0f0f23;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #16213e;
+  --bg-elevated: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent-primary: #60a5fa;
+  --accent-secondary: #a78bfa;
+  --accent-warning: #fbbf24;
+  --accent-danger: #f87171;
+  --border-light: #334155;
+  --border-medium: #475569;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.7);
+  --gradient-primary: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  --gradient-secondary: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #60a5fa 100%);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-secondary: #059669;
+  --accent-warning: #d97706;
+  --accent-danger: #dc2626;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
 }
 
 * {
@@ -47,7 +72,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 15, 28, 0.95);
+  background: rgba(15, 15, 35, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
   transition: all 0.3s ease;
@@ -64,11 +89,9 @@ body {
 
 .nav-brand {
   font-size: 1.5rem;
-  font-weight: 700;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .nav-menu {
@@ -77,15 +100,17 @@ body {
 }
 
 .nav-link {
-  color: var(--text-secondary);
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link::after {
@@ -156,13 +181,11 @@ body {
 
 .profile-name {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 0.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .profile-title {
@@ -261,12 +284,10 @@ body {
 
 .section-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   position: relative;
 }
 
@@ -303,6 +324,40 @@ body {
 .highlight {
   color: var(--accent-secondary);
   font-weight: 600;
+}
+
+/* Bio Section */
+.bio-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-elevated);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.bio-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.bio-content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.bio-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.bio-content p:last-child {
+  margin-bottom: 0;
 }
 
 .recruitment-notice {
@@ -685,11 +740,12 @@ html {
 /* Services Page Styles */
 .service-category {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--accent-primary);
 }
 
 .service-list {
@@ -808,6 +864,14 @@ html {
   margin: 0;
 }
 
+.supervision-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.5rem;
+  display: block;
+}
+
 .teaching-philosophy {
   color: var(--text-secondary);
   line-height: 1.7;
@@ -821,6 +885,14 @@ html {
 .philosophy-list li {
   margin-bottom: 0.75rem;
   line-height: 1.6;
+}
+
+/* Theme Transitions */
+.theme-transition,
+.theme-transition *,
+.theme-transition *:before,
+.theme-transition *:after {
+  transition: all 0.3s ease !important;
 }
 
 /* Custom scrollbar */

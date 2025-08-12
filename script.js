@@ -104,7 +104,7 @@ function initCurrentYear() {
     }
 }
 
-// Theme toggle functionality (optional)
+// Theme toggle functionality
 function initThemeToggle() {
     // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -114,18 +114,26 @@ function initThemeToggle() {
     const navbar = document.querySelector('.nav-container');
     if (navbar) {
         const themeToggle = document.createElement('button');
-        themeToggle.innerHTML = '🌙';
+        themeToggle.innerHTML = savedTheme === 'dark' ? '🌙' : '☀️';
         themeToggle.className = 'theme-toggle';
         themeToggle.title = 'Toggle theme';
         
         themeToggle.addEventListener('click', function() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Add transition class for smooth theme change
+            document.documentElement.classList.add('theme-transition');
             
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             
             this.innerHTML = newTheme === 'dark' ? '🌙' : '☀️';
+            
+            // Remove transition class after animation
+            setTimeout(() => {
+                document.documentElement.classList.remove('theme-transition');
+            }, 300);
         });
         
         navbar.appendChild(themeToggle);
@@ -277,19 +285,26 @@ const loaderStyles = `
     }
     
     .theme-toggle {
-        background: none;
-        border: none;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-light);
         color: var(--text-secondary);
         font-size: 1.2rem;
         cursor: pointer;
         padding: 0.5rem;
         border-radius: 8px;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
     }
     
     .theme-toggle:hover {
-        background: var(--bg-elevated);
-        color: var(--text-primary);
+        background: var(--accent-primary);
+        color: white;
+        transform: scale(1.05);
+        box-shadow: var(--shadow-md);
     }
     
     .nav-link.active {
