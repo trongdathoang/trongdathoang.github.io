@@ -392,8 +392,8 @@ body::after {
 
 .badge {
   display: inline-block;
-  background: var(--gradient-accent);
-  color: white;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -402,7 +402,7 @@ body::after {
 }
 
 .highlight {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   font-weight: 600;
 }
 
