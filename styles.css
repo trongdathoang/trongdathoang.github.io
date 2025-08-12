@@ -9,7 +9,7 @@
   --text-secondary: #e0e0e0;
   --text-muted: #a0a0a0;
   --accent-primary: #00d4ff;
-  --accent-secondary: #00ff88;
+  --accent-secondary: #ff6b9d;
   --accent-warning: #ffd93d;
   --accent-danger: #ff8a80;
   --border-light: #333333;
@@ -19,8 +19,8 @@
   --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.6);
   --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  --gradient-secondary: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
-  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff6b9d 0%, #ff4d7d 100%);
+  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #ff6b9d 100%);
 }
 
 /* Light Theme */
@@ -33,7 +33,7 @@
   --text-secondary: #4a4a4a;
   --text-muted: #6a6a6a;
   --accent-primary: #2563eb;
-  --accent-secondary: #00d4ff;
+  --accent-secondary: #ff6b9d;
   --accent-warning: #ffd93d;
   --accent-danger: #ff8a80;
   --border-light: #e5e5e5;
@@ -43,8 +43,8 @@
   --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.2);
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  --gradient-secondary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #00d4ff 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff6b9d 0%, #ff4d7d 100%);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #ff6b9d 100%);
 }
 
 * {
@@ -72,10 +72,14 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
   transition: all 0.3s ease;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .nav-container {
@@ -88,8 +92,8 @@ body {
 }
 
 .nav-brand {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -103,7 +107,7 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
   position: relative;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -131,13 +135,13 @@ body {
 
 /* Main Container */
 .main-container {
-  max-width: 1200px;
-  margin: 80px auto 0;
-  padding: 2rem;
+  max-width: 1000px;
+  margin: 70px auto 0;
+  padding: 1.5rem;
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 2rem;
-  min-height: calc(100vh - 80px);
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  min-height: calc(100vh - 70px);
 }
 
 /* Sidebar */
@@ -149,8 +153,8 @@ body {
 
 .profile-card {
   background: var(--bg-card);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
@@ -181,8 +185,8 @@ body {
 }
 
 .profile-name {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
@@ -190,14 +194,14 @@ body {
 }
 
 .profile-title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   text-align: center;
   margin-bottom: 0.25rem;
 }
 
 .profile-affiliation {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   text-align: center;
   margin-bottom: 1rem;
@@ -253,8 +257,8 @@ body {
 
 .content-section {
   background: var(--bg-card);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
@@ -284,9 +288,9 @@ body {
 }
 
 .section-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
   color: var(--text-primary);
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -305,9 +309,9 @@ body {
 
 /* Lead Text */
 .lead-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
   color: var(--text-secondary);
 }
 
@@ -338,11 +342,11 @@ body {
 }
 
 .bio-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent-primary);
 }
@@ -740,11 +744,11 @@ html {
 
 /* Services Page Styles */
 .service-category {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent-primary);
 }
