@@ -388,6 +388,8 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  min-height: 150px;
 }
 
 .avatar {
@@ -400,6 +402,10 @@ body::after {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  flex-shrink: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .avatar:hover {

@@ -31,24 +31,8 @@ function initNavbarEffects() {
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
         
-        // Add/remove background blur based on scroll position and theme
-        if (scrollTop > 50) {
-            if (currentTheme === 'light') {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(5, 5, 5, 0.98)';
-            }
-        } else {
-            if (currentTheme === 'light') {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            } else {
-                navbar.style.background = 'rgba(5, 5, 5, 0.95)';
-            }
-        }
-        
-        // Hide/show navbar on scroll (optional)
+        // Only handle hide/show navbar on scroll (no background changes)
         if (scrollTop > lastScrollTop && scrollTop > 100) {
             navbar.style.transform = 'translateY(-100%)';
         } else {
@@ -136,25 +120,6 @@ function initThemeToggle() {
             localStorage.setItem('theme', newTheme);
             
             this.innerHTML = newTheme === 'dark' ? '🌙' : '☀️';
-            
-            // Reset navbar background for new theme
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > 50) {
-                    if (newTheme === 'light') {
-                        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                    } else {
-                        navbar.style.background = 'rgba(5, 5, 5, 0.98)';
-                    }
-                } else {
-                    if (newTheme === 'light') {
-                        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                    } else {
-                        navbar.style.background = 'rgba(5, 5, 5, 0.95)';
-                    }
-                }
-            }
             
             // Remove transition class after animation
             setTimeout(() => {
