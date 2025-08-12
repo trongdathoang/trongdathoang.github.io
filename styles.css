@@ -3,21 +3,21 @@
   /* Dark Theme (Default) */
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
-  --bg-card: #2d2d2d;
-  --bg-elevated: #3a3a3a;
+  --bg-card: #1f1f1f;
+  --bg-elevated: #2a2a2a;
   --text-primary: #ffffff;
-  --text-secondary: #f0f0f0;
-  --text-muted: #b0b0b0;
+  --text-secondary: #e0e0e0;
+  --text-muted: #a0a0a0;
   --accent-primary: #00d4ff;
   --accent-secondary: #00ff88;
   --accent-warning: #ffd93d;
   --accent-danger: #ff8a80;
-  --border-light: #404040;
-  --border-medium: #555555;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
-  --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.7);
+  --border-light: #333333;
+  --border-medium: #444444;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.6);
   --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   --gradient-secondary: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
   --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
@@ -26,25 +26,25 @@
 /* Light Theme */
 [data-theme="light"] {
   --bg-primary: #ffffff;
-  --bg-secondary: #ffffff;
+  --bg-secondary: #fafafa;
   --bg-card: #ffffff;
-  --bg-elevated: #ffffff;
-  --text-primary: #000000;
-  --text-secondary: #333333;
-  --text-muted: #666666;
-  --accent-primary: #000000;
+  --bg-elevated: #f8f8f8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6a6a6a;
+  --accent-primary: #2563eb;
   --accent-secondary: #00d4ff;
   --accent-warning: #ffd93d;
   --accent-danger: #ff8a80;
   --border-light: #e5e5e5;
   --border-medium: #d0d0d0;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.25);
-  --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   --gradient-secondary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  --gradient-accent: linear-gradient(135deg, #000000 0%, #00d4ff 100%);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #00d4ff 100%);
 }
 
 * {
@@ -88,8 +88,8 @@ body {
 }
 
 .nav-brand {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -102,7 +102,8 @@ body {
 .nav-link {
   color: var(--text-primary);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   position: relative;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -180,8 +181,8 @@ body {
 }
 
 .profile-name {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
@@ -189,14 +190,14 @@ body {
 }
 
 .profile-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   text-align: center;
   margin-bottom: 0.25rem;
 }
 
 .profile-affiliation {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   text-align: center;
   margin-bottom: 1rem;
@@ -283,8 +284,8 @@ body {
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -304,8 +305,8 @@ body {
 
 /* Lead Text */
 .lead-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
@@ -337,8 +338,8 @@ body {
 }
 
 .bio-title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
@@ -739,8 +740,8 @@ html {
 
 /* Services Page Styles */
 .service-category {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-primary);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
