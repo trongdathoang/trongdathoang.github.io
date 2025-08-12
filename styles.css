@@ -73,6 +73,21 @@
     radial-gradient(circle at 85% 45%, rgba(0, 0, 0, 0.015) 0%, transparent 40%);
 }
 
+/* Additional background element for light mode */
+[data-theme="light"] .main-container::before {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(0, 0, 0, 0.03), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(0, 0, 0, 0.03), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(0, 0, 0, 0.02), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(0, 0, 0, 0.02), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(0, 0, 0, 0.025), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(0, 0, 0, 0.025), transparent),
+    radial-gradient(2px 2px at 240px 90px, rgba(0, 0, 0, 0.02), transparent),
+    radial-gradient(1px 1px at 280px 20px, rgba(0, 0, 0, 0.02), transparent),
+    radial-gradient(2px 2px at 320px 70px, rgba(0, 0, 0, 0.015), transparent),
+    radial-gradient(1px 1px at 360px 40px, rgba(0, 0, 0, 0.015), transparent);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -212,16 +227,16 @@ body::after {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(99, 102, 241, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(168, 85, 247, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(99, 102, 241, 0.3), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(139, 92, 246, 0.3), transparent),
-    radial-gradient(1px 1px at 200px 60px, rgba(168, 85, 247, 0.3), transparent),
-    radial-gradient(2px 2px at 240px 90px, rgba(99, 102, 241, 0.3), transparent),
-    radial-gradient(1px 1px at 280px 20px, rgba(139, 92, 246, 0.3), transparent),
-    radial-gradient(2px 2px at 320px 70px, rgba(168, 85, 247, 0.3), transparent),
-    radial-gradient(1px 1px at 360px 40px, rgba(99, 102, 241, 0.3), transparent);
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.08), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.08), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.06), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.06), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.05), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(255, 255, 255, 0.05), transparent),
+    radial-gradient(2px 2px at 240px 90px, rgba(255, 255, 255, 0.04), transparent),
+    radial-gradient(1px 1px at 280px 20px, rgba(255, 255, 255, 0.04), transparent),
+    radial-gradient(2px 2px at 320px 70px, rgba(255, 255, 255, 0.03), transparent),
+    radial-gradient(1px 1px at 360px 40px, rgba(255, 255, 255, 0.03), transparent);
   background-repeat: repeat;
   background-size: 400px 100px;
   animation: particleFloat 15s linear infinite;
@@ -379,11 +394,22 @@ body::after {
   border: 4px solid var(--accent-primary);
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
+  object-fit: cover;
+  display: block;
 }
 
 .avatar:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-lg);
+}
+
+/* Ensure proper avatar border colors in both themes */
+[data-theme="light"] .avatar {
+  border-color: #000000;
+}
+
+[data-theme="dark"] .avatar {
+  border-color: #ffffff;
 }
 
 .profile-name {
@@ -618,10 +644,17 @@ body::after {
 .recruitment-notice p {
   margin-bottom: 0.75rem;
   color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .recruitment-notice p:last-child {
   margin-bottom: 0;
+}
+
+.recruitment-notice p strong {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 /* News Section */
