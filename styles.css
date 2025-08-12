@@ -811,6 +811,17 @@ html {
   margin: 0;
 }
 
+.publication-title a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.publication-title a:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
 .publication-authors {
   color: var(--text-secondary);
   font-size: 0.9rem;
