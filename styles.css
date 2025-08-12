@@ -1,26 +1,26 @@
 /* Modern Academic Homepage Styles */
 :root {
   /* Dark Theme (Default) */
-  --bg-primary: #0f0f23;
-  --bg-secondary: #1a1a2e;
-  --bg-card: #16213e;
-  --bg-elevated: #1e293b;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #2d2d2d;
+  --bg-elevated: #3a3a3a;
   --text-primary: #ffffff;
-  --text-secondary: #e2e8f0;
-  --text-muted: #94a3b8;
-  --accent-primary: #60a5fa;
-  --accent-secondary: #a78bfa;
-  --accent-warning: #fbbf24;
-  --accent-danger: #f87171;
-  --border-light: #334155;
-  --border-medium: #475569;
+  --text-secondary: #f0f0f0;
+  --text-muted: #b0b0b0;
+  --accent-primary: #00d4ff;
+  --accent-secondary: #00ff88;
+  --accent-warning: #ffd93d;
+  --accent-danger: #ff8a80;
+  --border-light: #404040;
+  --border-medium: #555555;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
   --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.7);
-  --gradient-primary: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-  --gradient-secondary: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #60a5fa 100%);
+  --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  --gradient-secondary: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
 }
 
 /* Light Theme */
@@ -72,7 +72,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 15, 35, 0.95);
+  background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
   transition: all 0.3s ease;
