@@ -274,7 +274,7 @@ body::after {
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
