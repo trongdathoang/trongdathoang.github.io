@@ -267,9 +267,10 @@ body::after {
 
 .profile-title {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 0.25rem;
+  font-weight: 500;
 }
 
 .profile-affiliation {
