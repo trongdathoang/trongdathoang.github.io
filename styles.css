@@ -921,8 +921,8 @@ html {
 }
 
 .teaching-semester {
-  background: var(--gradient-secondary);
-  color: white;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
