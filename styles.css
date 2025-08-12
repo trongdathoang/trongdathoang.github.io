@@ -244,14 +244,14 @@ body::after {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.95);
+  background: var(--bg-primary);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
   transition: all 0.3s ease;
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-primary);
 }
 
 .nav-container {
@@ -267,7 +267,15 @@ body::after {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure proper nav-brand colors in both themes */
+[data-theme="light"] .nav-brand {
+  color: #000000;
+}
+
+[data-theme="dark"] .nav-brand {
+  color: #ffffff;
 }
 
 .nav-menu {
@@ -288,6 +296,27 @@ body::after {
 .nav-link:hover {
   color: var(--text-primary);
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure proper navigation colors in both themes */
+[data-theme="light"] .nav-link {
+  color: #000000;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .nav-link:hover {
+  color: #000000;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .nav-link {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .nav-link::after {
@@ -331,7 +360,6 @@ body::after {
   box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  background: rgba(31, 31, 31, 0.9);
 }
 
 .profile-card:hover {
@@ -364,7 +392,15 @@ body::after {
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure proper profile-name colors in both themes */
+[data-theme="light"] .profile-name {
+  color: #000000;
+}
+
+[data-theme="dark"] .profile-name {
+  color: #ffffff;
 }
 
 .profile-title {
@@ -441,7 +477,7 @@ body::after {
   opacity: 0;
   transform: translateY(20px);
   backdrop-filter: blur(10px);
-  background: rgba(31, 31, 31, 0.9);
+  background: var(--bg-card);
 }
 
 .content-section:hover {
@@ -469,8 +505,16 @@ body::after {
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--text-primary);
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+/* Ensure proper section-title colors in both themes */
+[data-theme="light"] .section-title {
+  color: #000000;
+}
+
+[data-theme="dark"] .section-title {
+  color: #ffffff;
 }
 
 .section-title::after {
@@ -533,10 +577,18 @@ body::after {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent-primary);
+}
+
+/* Ensure proper bio-title colors in both themes */
+[data-theme="light"] .bio-title {
+  color: #000000;
+}
+
+[data-theme="dark"] .bio-title {
+  color: #ffffff;
 }
 
 .bio-content {
